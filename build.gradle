@@ -1,0 +1,37 @@
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+group 'com.todomvc'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:2.5.13'
+    implementation 'com.codeborne:selenide:5.17.4'
+    implementation 'org.aeonbits.owner:owner:1.0.12'
+    testImplementation  'org.spockframework:spock-core:1.2-groovy-2.5', {
+        exclude module: 'groovy-all'
+    }
+}
+
+test{
+    systemProperties System.properties
+
+    doFirst {
+        def DEFAULT_ENVIRONMENT = 'default'
+        def ENVIRONMENT_PROPERTY_NAME = 'env'
+
+        def chosenEnvironment = System.getProperty(ENVIRONMENT_PROPERTY_NAME) ?: DEFAULT_ENVIRONMENT
+
+        println "Chosen test environment: '$chosenEnvironment'"
+        systemProperty ENVIRONMENT_PROPERTY_NAME, chosenEnvironment
+    }
+}
