@@ -3,6 +3,7 @@
 
 # Others
 .idea
+*.iml
 *.log
 .gradle
 /build
