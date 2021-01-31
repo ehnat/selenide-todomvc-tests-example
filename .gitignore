@@ -1,10 +1,10 @@
-# Compiled source #
+# Compiled source
 *.class
 
-# Others #
+# Others
+.idea
 *.log
 .gradle
 /build
 */build
-.idea
 .allure
