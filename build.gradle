@@ -13,7 +13,6 @@ plugins {
 allure {
     autoconfigure = true
     version = "$allureVersion"
-//    downloadLinkFormat = "https://dl.bintray.com/qameta/maven/io/qameta/allure/allure-commandline/%s/allure-commandline-%<s.zip"
 }
 
 group 'com.todomvc'
