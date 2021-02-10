@@ -3,8 +3,9 @@ package com.todomvc.spec
 class AddTaskSpec extends BaseSpec {
 
     def 'task should be added to the list'() {
-        given: 'Task name'
+        given: 'task name'
         String taskName = 'Task 1'
+
         when: 'task is added to the list'
         todoMvcPage.addTask(taskName)
 
@@ -15,7 +16,7 @@ class AddTaskSpec extends BaseSpec {
     }
 
     def 'tasks should be added to the list'() {
-        given: 'Task names'
+        given: 'task names'
         List<String> tasksName = ['Task 1', 'Task 2']
 
         when: 'task is added to the list'

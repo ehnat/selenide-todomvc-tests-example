@@ -37,7 +37,6 @@ class RemoveTaskSpec extends BaseSpec {
         then: '#tasksLeftAmount is/are left'
         todoMvcPage.assertLeftTasksAmount(tasksLeftAmount)
 
-
         where:
         tasksAmountToComplete | tasksLeftAmount
         1                     | 2
