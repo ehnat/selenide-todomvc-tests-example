@@ -1,6 +1,7 @@
 buildscript {
     ext {
         allureVersion = '2.13.8'
+        logbackVersion = '1.2.3'
     }
 }
 
@@ -35,6 +36,8 @@ dependencies {
     testImplementation "io.qameta.allure:allure-selenide:$allureVersion"
     testImplementation "io.qameta.allure:allure-junit4:$allureVersion"
     testImplementation "io.qameta.allure:allure-junit4-aspect:$allureVersion"
+    testCompile "ch.qos.logback:logback-core:$logbackVersion"
+    testCompile "ch.qos.logback:logback-classic:$logbackVersion"
 }
 
 test {
