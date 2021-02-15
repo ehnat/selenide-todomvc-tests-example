@@ -29,6 +29,11 @@ Allure is using for generation test results. Useful commands:
 - for making additional configuration: https://selenide.org/documentation/screenshots.html
 
 
+### Choosing browser
+- from default tests use `chrome` browser
+- for running tests in a different browser e.g. in firefox `-Dselenide.browser=firefox`
+- additional information for using browser in Selenide: https://github.com/selenide/selenide/wiki/How-Selenide-creates-WebDriver
+
 ### How to run
 1) mac
    `./gradlew clean test -Denv=ENVIRONMENT --info`
